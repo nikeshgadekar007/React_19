@@ -8,6 +8,7 @@ import PaginatedDisplay from "./hooks/UseInfiniteQuery";
 import InfiniteScrollDisplay from "./hooks/InfiniteScroll";
 import PollingComponent from "./hooks/PollingCompo";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Main from './RTK/Main';
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
         {/* <PaginatedDisplay /> */}
         {/* <InfiniteScrollDisplay /> */}
-        <PollingComponent />
+        {/* <PollingComponent /> */}
+        <Main />
       </QueryClientProvider>
     </>
   );
