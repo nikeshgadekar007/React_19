@@ -17,7 +17,12 @@ import ColumnGroups from "./AgGrid/ColumnGroups";
 import Pagination from "./AgGrid/Pagination";
 import RowDragging from "./AgGrid/RowDragging";
 import GridToGridDrag from "./AgGrid/GridToGridDrag";
-
+import RowGrouping from "./AgGrid/RowGrouping";
+import MasterCustomDetails from "./AgGrid/MasterDetail/MasterCustomDetails";
+import UseCallabackParent from "./hooks/UseCallaback/UseCallabackParent";
+import UseDeferredValue from "./hooks/UseDeferredValue/UseDeferredValue";
+import UseTransition from './hooks/UseTransition'
+import VirtualDom from "./VirtualDom";
 
 // Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -27,7 +32,9 @@ const gridArra = [
   <ColumnGroups />,
   <Pagination />,
   <RowDragging />,
-  <GridToGridDrag />
+  <GridToGridDrag />,
+  <RowGrouping />,
+  <MasterCustomDetails />
 ];
 
 const queryClient = new QueryClient();
@@ -47,7 +54,11 @@ function App() {
         {/* <CheckboxSelection /> */}
         {/* <ColumnGroups /> */}
         {/* <Pagination /> */}
-        {gridArra[5]}
+        {/* {gridArra[7]} */}
+        {/* <UseCallabackParent/> */}
+        {/* <VirtualDom /> */}
+        {/* <UseDeferredValue /> */}
+        <UseTransition />
       </QueryClientProvider>
     </>
   );
