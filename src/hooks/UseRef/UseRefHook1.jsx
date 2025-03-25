@@ -11,8 +11,8 @@ function UseRefHook1() {
   const clickHandler = () => {
     setCounter(counter + 1);
     inputRef.current++;
-    console.log("counter===>", counter)
-    console.log("inputRef===>", inputRef.current)
+    console.log("counter===>", counter) //0
+    console.log("inputRef===>", inputRef.current) //1
   }
 
   return (

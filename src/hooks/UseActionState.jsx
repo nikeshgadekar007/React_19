@@ -2,6 +2,8 @@
 
 import React, { useActionState } from "react";
 
+// useActionState is a Hook that allows you to update state based on the result of a form action.
+
 export function UseActionState(props) {
   const handleClick = async (previousState, formData) => {
     const username = formData.get("username");
