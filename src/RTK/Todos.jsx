@@ -5,7 +5,7 @@ import { DisplayComponent } from "./DisplayComponent";
 
 function Todos() {
   const {
-    todos: { todos },
+    getAllTodos: { todos },
     loading,
   } = useSelector((state) => state);
 
@@ -20,6 +20,7 @@ function Todos() {
   return (
     <div>
       <h2>****TODOS****</h2>
+      <br />
       <React.Fragment key={Math.random()}>
         {todos.map((item, index) => (
           <DisplayComponent key={index} {...item} />

@@ -13,14 +13,17 @@ const ROCKET_URL = "https://jsonplaceholder.typicode.com/todos";
 
 export const getAllTodos = createAsyncThunk(
   "rockets/fetchRockets",
+  // async () => {
+  //   const response = await axios.get(ROCKET_URL);
+  //   return response.data;
+  // }
   async () => {
-    const response = await axios.get(ROCKET_URL);
-    return response.data;
+    return await fetch(ROCKET_URL).then((res) => res.json());
   }
 );
 
 export const todosSlice = createSlice({
-  name: "todos",
+  name: "any_unique_name",
   initialState: initialState,
   reducers: {
     getTodos: () => {},

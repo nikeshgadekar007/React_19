@@ -41,8 +41,7 @@ const UseCallabackParent = () => {
 export default UseCallabackParent;
 
 
-const globalScope = 'Nikesh';
-
+// const globalScope = 'Nikesh';
 // (function outerFn(outerFnArg) {
 //   const outerVar = 'a';
 //   (function innerFn(innerFnArg) {

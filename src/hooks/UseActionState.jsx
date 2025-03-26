@@ -10,7 +10,7 @@ export function UseActionState(props) {
     const password = formData.get("password");
 
     await new Promise((res) => setTimeout(res, 2000));
-    console.log("name===>", username, password);
+    return [username, password];
   };
 
   const [state, formAction, isPending] = useActionState(handleClick, undefined);
@@ -26,7 +26,10 @@ export function UseActionState(props) {
         <br></br>
         <br></br>
         <button disabled={isPending}>{"submit"}</button>
-        {state}
+        <br />
+        <br />
+        {state && `Username is: ${state[0]}`} <br />
+        {state && `Password is: ${state[1]}`}
       </form>
     </>
   );
