@@ -26,7 +26,11 @@ export const todosSlice = createSlice({
   name: "any_unique_name",
   initialState: initialState,
   reducers: {
-    getTodos: () => {},
+    addTodo: (state, action) => {
+      console.log("any_unique_name state=====", state)
+      console.log("any_unique_name state=====", action.payload)
+      state.todos = [action.payload]
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -45,6 +49,6 @@ export const todosSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { getTodos } = todosSlice.actions;
+export const { addTodo } = todosSlice.actions;
 
 export default todosSlice.reducer;
